@@ -10,19 +10,27 @@
       height: 360%
       widght: 100%
       object-fit:cover;
+      margin-bottom: 16px;
     }
-    
   </style>
   </head>
   <body>
     {% include 'nav.html' %}
-    <div class="container">
-    <h1 class="text-center mt-2 mb-4">Techboys Careers</h1>
     <img class="img-fluid" id="banner" src="https://techboys-career-website.bbg0007.repl.co/static/banner.jpeg" height="320">
-    <h2 class="text-center mt-2 mb-4">About Techboys</h2>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">
+      {{comany_name}} careers
+    </h1>
+    <div class="row" style=margin-bottom:16px>
+      <div class="col-md-6">
     <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      At Techboys, we’re on a mission to build the most highly reputed technical university in the world, and we’re building it completely online. Our flagship data science program helps working professionals with a background in programming or analytics make a career transition to data science. We also offer several free beginner-friendly courses and have a fast-growing community of 200,000+ users.
     </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpeg" style="height:330px;border-radius:4px;">
+      </div>
+      </div>
     <h2 class="text-center mt-2 mb-4">Open position</h2>
     <div>
       {% for job in jobs %}
@@ -34,5 +42,6 @@
         <p class="mt-4">Copyright 2023, Techboys</p>
       </div>
     </div>
+    {% include 'footer.html'%}
   </body>
 </html>
